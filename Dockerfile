@@ -11,10 +11,10 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
 RUN pip install --no-cache-dir --upgrade pip \
  && pip install --no-cache-dir \
         torch==2.2.1+cu121 torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu121 \
- && pip install --no-cache-dir vllm bitsandbytes accelerate flashinfer
+ && pip install --no-cache-dir vllm bitsandbytes accelerate
 
  # 3. 安装 FlashInfer 加速采样模块
-RUN pip install --no-cache-dir flashinfer
+RUN pip install --no-cache-dir flashinfer-python
 
 # 4. 环境变量（可按需修改）
 ENV MODEL_PATH=/models/phi4-gptq-int4
