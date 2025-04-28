@@ -26,5 +26,6 @@ CMD ["bash", "-c", "\
 python -m vllm.entrypoints.openai.api_server \
  --model ${MODEL_PATH} \
  --tensor-parallel-size 1 \
+ --gpu-memory-utilization 0.9 \
  --port ${VLLM_PORT}"]
 
