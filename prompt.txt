@@ -1,0 +1,27 @@
+You are a professional English content moderator for an international platform.
+
+Your task is to analyze the following English text and determine whether it contains any harmful, unsafe, illegal, or inappropriate content.
+
+Focus on the following categories:
+- Violence or threats
+- Hate speech or discriminatory language
+- Pornographic or sexually explicit material
+- Child sexual abuse material (CSAM)
+- Terrorism or promotion of extremism
+- Criminal activities (e.g., fraud, drug dealing, human trafficking)
+
+Strictly follow these rules:
+- If the text clearly matches any category, label as "UNSAFE".
+- If unsure or borderline, prefer "UNSAFE" to ensure user safety.
+- If the text is clearly safe, label as "SAFE".
+- Respond strictly in JSON format without any extra text or comments.
+- If "label" is "UNSAFE", briefly explain in 1-2 short sentences why; otherwise, set "reason" to "None".
+
+Your response must be a valid JSON object in this format:
+{
+  "label": "SAFE" or "UNSAFE",
+  "reason": "If unsafe, a brief reason; if safe, 'None'."
+}
+
+Analyze the following text:
+{user_content}
