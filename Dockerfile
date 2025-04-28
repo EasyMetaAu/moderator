@@ -14,7 +14,7 @@ RUN pip install --no-cache-dir --upgrade pip \
  && pip install --no-cache-dir vllm bitsandbytes accelerate
 
  # 3. 安装 FlashInfer 加速采样模块
-RUN pip install --no-cache-dir flashinfer-python
+RUN pip install --no-cache-dir flashinfer-python==0.2.2
 
 # 4. 环境变量（可按需修改）
 ENV MODEL_PATH=/models/phi4-gptq-int4
