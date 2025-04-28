@@ -1,0 +1,29 @@
+# ---------- docker-compose.yaml ----------
+services:
+  phi4-moderator:
+    build: .
+    image: vllm-phi4:latest
+    container_name: phi4-moderator
+    restart: unless-stopped
+
+    # GPU 直通
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - MODEL_PATH=/models/phi4-gptq-int4
+      - VLLM_PORT=6085
+
+    # 模型文件目录挂载
+    volumes:
+      - ./models/phi4-gptq-int4:/models/phi4-gptq-int4:ro
+
+    ports:
+      - "6085:6085"
+
