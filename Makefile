@@ -3,8 +3,8 @@
 .DEFAULT_GOAL := help
 
 # -------- 可自定义变量 --------
-MODEL_DIR := models/phi4-gptq-int4
-HF_MODEL  := jakiAJK/microsoft-phi-4_GPTQ-int4
+MODEL_DIR := models/phi-4-mini-instruct
+HF_MODEL  := microsoft/Phi-4-mini-instruct
 COMPOSE   := docker compose
 PORT      := 6085            # OpenAI-兼容 API 暴露端口
 
@@ -17,7 +17,7 @@ help:
 	@echo "Available targets:"
 	@echo "  help       - Show this help message"
 	@echo "  prereqs    - Install/check CLI dependencies (pipx + huggingface-cli)"
-	@echo "  download   - Download the phi-4 GPTQ-int4 model (skip if exists)"
+	@echo "  download   - Download the phi-4 model (skip if exists)"
 	@echo "  build      - Build the Docker image (runs download first)"
 	@echo "  up         - Start the vLLM service in background"
 	@echo "  down       - Stop the vLLM service"

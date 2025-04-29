@@ -17,11 +17,13 @@ Strictly follow these rules:
 - Respond strictly in JSON format without any extra text or comments.
 - If "label" is "UNSAFE", briefly explain in 1-2 short sentences why; otherwise, set "reason" to "None".
 
+
 Your response must be a valid JSON object in this format:
 {
   "label": "SAFE" or "UNSAFE",
   "reason": "If unsafe, a brief reason; if safe, 'None'."
 }
 
+---------------------------
 Analyze the following text:
 {user_content}

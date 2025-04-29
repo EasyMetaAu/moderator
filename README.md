@@ -1,17 +1,17 @@
 # Content Moderation API
 
-A high-performance content moderation system powered by vLLM and phi4-gptq-int4 model, providing OpenAI-compatible API endpoints for text content safety analysis.
+A high-performance content moderation system powered by vLLM and phi-4-mini-instruct model, providing OpenAI-compatible API endpoints for text content safety analysis.
 
 ## 🚀 Features
 
-- **High Performance**: Powered by vLLM with phi4-gptq-int4 model
+- **High Performance**: Powered by vLLM with phi-4-mini-instruct model
 - **OpenAI-Compatible API**: Easy integration with existing systems
 - **Strict Safety Standards**: Comprehensive content moderation
 - **Production-Ready**: Optimized for stability and reliability
 
 ## 🛠️ Technical Stack
 
-- **Model**: phi4-gptq-int4
+- **Model**: phi-4-mini-instruct
 - **Inference Engine**: vLLM
 - **API**: OpenAI-compatible REST API
 
