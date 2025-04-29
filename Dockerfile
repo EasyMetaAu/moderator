@@ -31,5 +31,6 @@ CMD ["bash", "-c", "\
   --model ${MODEL_PATH} \
   --tensor-parallel-size 1 \
   --gpu-memory-utilization 0.9 \
+  --max_model_len 8192 \
   --port ${VLLM_PORT}"]
 
